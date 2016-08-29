@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/activity_main"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="16dp"
+              android:orientation="vertical"
+              tools:context=".MainActivity">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="16dp"
+		android:text="@string/header_alipay_client"
+		android:textAppearance="@style/TextAppearance.AppCompat.Button"
+		android:textColor="?attr/colorAccent"/>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="8dp"
+		android:layout_marginRight="8dp"
+		android:id="@+id/client_status_text"
+		android:text="@string/format_status_text"
+		android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="32dp"
+		android:layout_marginBottom="16dp"
+		android:text="@string/header_transfer_old"
+		android:textAppearance="@style/TextAppearance.AppCompat.Button"
+		android:textColor="?attr/colorAccent"/>
+
+	<android.support.v7.widget.AppCompatEditText
+		android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/qrcode_text"
+	    android:singleLine="true"
+	    android:text="@string/sample_qrcode"
+		android:hint="@string/hint_qrcode"/>
+
+	<android.support.v7.widget.AppCompatButton
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:layout_marginBottom="8dp"
+		android:id="@+id/btn_transfer"
+		android:text="@string/button_transfer"/>
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<resources>
+
+	<string name="app_name">AlipayZeroSdk</string>
+
+	<string name="header_alipay_client">Alipay Client</string>
+	<string name="format_status_text">isInstalled=%1$s, version=%2$s</string>
+
+	<string name="header_transfer_old">Old QRCode Transfer</string>
+	<string name="hint_qrcode">Old QRCode Result</string>
+	<string name="button_transfer">Start Alipay Transfer</string>
+	<string name="toast_qrcode_empty">QRCode result cannot be empty.</string>
+
+	<string name="sample_qrcode" translatable="false">aehvyvf4taua18zo6e</string>
+	<string name="sample_intent_url" translatable="false">"intent://platformapi/startapp?appId=20000001&amp;_t=1472448715162#Intent;scheme=alipays;package=com.eg.android.AlipayGphone;end"</string>
+
+</resources>

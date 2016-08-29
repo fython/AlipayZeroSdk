@@ -1,0 +1,13 @@
+<resources>
+
+	<string name="app_name">支付宝 ZeroSdk</string>
+
+	<string name="header_alipay_client">支付宝客户端</string>
+	<string name="format_status_text">已安装=%1$s, 版本名称=%2$s</string>
+
+	<string name="header_transfer_old">旧版二维码转账</string>
+	<string name="hint_qrcode">二维码解析结果</string>
+	<string name="button_transfer">打开支付宝转账</string>
+	<string name="toast_qrcode_empty">二维码解析结果不可以为空。</string>
+
+</resources>
