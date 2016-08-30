@@ -28,12 +28,12 @@
             jcenter()
             maven {
                 url "https://jitpack.io"
-                }
             }
+        }
     }
 
     dependencies {
-        compile 'moe.feng:AlipayZeroSdk:1.0'
+        compile 'moe.feng:AlipayZeroSdk:1.0.1'
     }
 
 AlipayZeroSdk 只有一个类，我们在开始使用转账界面跳转之前，最好检测一下用户是否安装支付宝客户端，以便作出不同的应对方式：
