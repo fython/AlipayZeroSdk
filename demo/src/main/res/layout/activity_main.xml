@@ -50,4 +50,29 @@
 		android:id="@+id/btn_transfer"
 		android:text="@string/button_transfer"/>
 
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="32dp"
+		android:layout_marginBottom="16dp"
+		android:text="@string/header_other"
+		android:textAppearance="@style/TextAppearance.AppCompat.Button"
+		android:textColor="?attr/colorAccent"/>
+
+	<android.support.v7.widget.AppCompatButton
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:layout_marginBottom="8dp"
+		android:id="@+id/btn_open_scanner"
+		android:text="@string/button_open_scanner"/>
+
+	<android.support.v7.widget.AppCompatButton
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:layout_marginBottom="8dp"
+		android:id="@+id/btn_open_pay_barcode"
+		android:text="@string/button_open_pay_barcode"/>
+
 </LinearLayout>

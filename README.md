@@ -33,7 +33,7 @@
     }
 
     dependencies {
-        compile 'moe.feng:AlipayZeroSdk:1.0.1'
+        compile 'moe.feng:AlipayZeroSdk:1.1'
     }
 
 AlipayZeroSdk 只有一个类，我们在开始使用转账界面跳转之前，最好检测一下用户是否安装支付宝客户端，以便作出不同的应对方式：
@@ -46,7 +46,7 @@ AlipayZeroSdk 只有一个类，我们在开始使用转账界面跳转之前，最好检测一下用户是否安
 `AlipayZeroSdk.startAlipayClient(Context, String 从二维码获取到的参数)`
 
 
-之后就能看到转账界面跳出了，除了这些功能你还可以查询支付宝应用的版本号（并没有什么用就是了……）
+之后就能看到转账界面跳出了，除了这些功能你还可以查询支付宝应用的版本号、打开支付宝的扫一扫界面或者付款码界面
 
 
 ### Demo

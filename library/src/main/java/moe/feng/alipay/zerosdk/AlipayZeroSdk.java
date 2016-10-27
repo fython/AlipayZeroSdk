@@ -6,6 +6,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
+import android.service.quicksettings.TileService;
 
 import java.net.URISyntaxException;
 
@@ -86,6 +89,50 @@ public class AlipayZeroSdk {
 		} catch (PackageManager.NameNotFoundException e) {
 			e.printStackTrace();
 			return null;
+		}
+	}
+
+	/**
+	 * 打开支付宝扫一扫界面
+	 * @param context Context
+	 * @return 是否成功打开 Activity
+	 */
+	public static boolean openAlipayScan(Context context) {
+		try {
+			Uri uri = Uri.parse("alipayqr://platformapi/startapp?saId=10000007");
+			Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+			if (context instanceof TileService) {
+				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+					((TileService) context).startActivityAndCollapse(intent);
+				}
+			} else {
+				context.startActivity(intent);
+			}
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
+	/**
+	 * 打开支付宝付款码
+	 * @param context Context
+	 * @return 是否成功打开 Activity
+	 */
+	public static boolean openAlipayBarcode(Context context) {
+		try {
+			Uri uri = Uri.parse("alipayqr://platformapi/startapp?saId=20000056");
+			Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+			if (context instanceof TileService) {
+				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+					((TileService) context).startActivityAndCollapse(intent);
+				}
+			} else {
+				context.startActivity(intent);
+			}
+			return true;
+		} catch (Exception e) {
+			return false;
 		}
 	}
 

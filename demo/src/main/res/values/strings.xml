@@ -10,6 +10,10 @@
 	<string name="button_transfer">Start Alipay Transfer</string>
 	<string name="toast_qrcode_empty">QRCode result cannot be empty.</string>
 
+	<string name="header_other">Other</string>
+	<string name="button_open_scanner">Open Alipay QRCode Scanner</string>
+	<string name="button_open_pay_barcode">Open Pay Barcode</string>
+
 	<string name="sample_qrcode" translatable="false">aehvyvf4taua18zo6e</string>
 	<string name="sample_intent_url" translatable="false">"intent://platformapi/startapp?appId=20000001&amp;_t=1472448715162#Intent;scheme=alipays;package=com.eg.android.AlipayGphone;end"</string>
 

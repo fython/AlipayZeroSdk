@@ -10,4 +10,8 @@
 	<string name="button_transfer">打開支付寶轉賬</string>
 	<string name="toast_qrcode_empty">QRCode 解析結果不可以為空。</string>
 
+	<string name="header_other">其它</string>
+	<string name="button_open_scanner">打開支付寶掃一掃</string>
+	<string name="button_open_pay_barcode">打開付款碼</string>
+
 </resources>

@@ -43,6 +43,18 @@ public class MainActivity extends AppCompatActivity {
 				);
 			}
 		});
+		findViewById(R.id.btn_open_scanner).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				AlipayZeroSdk.openAlipayScan(MainActivity.this);
+			}
+		});
+		findViewById(R.id.btn_open_pay_barcode).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				AlipayZeroSdk.openAlipayBarcode(MainActivity.this);
+			}
+		});
 	}
 
 	@Override
