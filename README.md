@@ -1,27 +1,27 @@
 # Alipay ZeroSdk
 
-> һ������������֧����ת�˹�����
+> 一个第三方轻量支付宝转账工具类
 
 ---
 
-### �������ʲô��
+### 这个能做什么？
 
-������Ӧ����ֱ����ת��֧����ת�˵Ľ��棬�ȸ���ճ��֧�����˺Ÿ������š���ȫ��
-Ȼ�����Ĺ��ܾ���ֱ����ת��ת�˽��棬������֧�������
-
-
-### Ϊʲô���������
-
-֧�����Ľӿڻ������Ƕ���ҵ�û����ŵģ�����ֻ����һ��������ڵĸ��˶�����������˵û��ҪȥŪ��ô�ණ����
+可以在应用中直接跳转到支付宝转账的界面，比复制粘贴支付宝账号更加优雅、安全。
+然而它的功能就是直接跳转到转账界面，不会获得支付结果。
 
 
-### ��ô�ã�
+### 为什么我做这个？
 
-����Ҫ׼��һ����ά�룬��ϸ�������Ķ��ҵĲ��� [**http://blog.feng.moe/2016/08/29/alipay-zerosdk/**](http://blog.feng.moe/2016/08/29/alipay-zerosdk/)
+支付宝的接口基本都是对企业用户开放的，对于只想做一个捐赠入口的个人独立开发者来说没必要去弄这么多东西。
 
-�Ӷ�ά���л�ȡ������Ĳ�����һ��Ӣ�����ֻ�ϵ��ַ�������������ʼ���������
 
-�� Gradle ������������
+### 怎么用？
+
+你需要准备一个二维码，详细方法请阅读我的博客 [**http://feng.moe/archives/8/**](http://feng.moe/archives/8/)
+
+从二维码中获取到所需的参数（一串英文数字混合的字符）后，我们来开始引入这个库
+
+在 Gradle 中配置依赖：
 
     allprojects {
         repositories {
@@ -36,17 +36,17 @@
         compile 'moe.feng:AlipayZeroSdk:1.1'
     }
 
-AlipayZeroSdk ֻ��һ���࣬�����ڿ�ʼʹ��ת�˽�����ת֮ǰ����ü��һ���û��Ƿ�װ֧�����ͻ��ˣ��Ա�������ͬ��Ӧ�Է�ʽ��
+AlipayZeroSdk 只有一个类，我们在开始使用转账界面跳转之前，最好检测一下用户是否安装支付宝客户端，以便作出不同的应对方式：
 
 `AlipayZeroSdk.hasInstalledAlipayClient(Context)`
 
 
-ȷ�Ϸ��ؽ��Ϊ true �����ǾͿ�����ת��ת�˽����ˣ���ʱ�����Ҫ�Ӷ�ά���ȡ���Ĳ�����
+确认返回结果为 true 后，我们就可以跳转到转账界面了，这时候就需要从二维码获取到的参数：
 
-`AlipayZeroSdk.startAlipayClient(Context, String �Ӷ�ά���ȡ���Ĳ���)`
+`AlipayZeroSdk.startAlipayClient(Context, String 从二维码获取到的参数)`
 
 
-֮����ܿ���ת�˽��������ˣ�������Щ�����㻹���Բ�ѯ֧����Ӧ�õİ汾�š���֧������ɨһɨ������߸��������
+之后就能看到转账界面跳出了，除了这些功能你还可以查询支付宝应用的版本号、打开支付宝的扫一扫界面或者付款码界面
 
 
 ### Demo
@@ -54,18 +54,18 @@ AlipayZeroSdk ֻ��һ���࣬�����ڿ�ʼʹ��ת�˽�����ת֮ǰ����ü��һ���û��Ƿ�
 <a href="./art/screenshot.png"><img src="./art/screenshot.png" width="40%"/></a>
 
 
-����Դ� [Github Releases](https://github.com/fython/AlipayZeroSdk/releases) ���ص� Demo �İ�װ��
+你可以从 [Github Releases](https://github.com/fython/AlipayZeroSdk/releases) 下载到 Demo 的安装包
 
-### ��ϵ��
+### 联系我
 
-����΢����[@FungGo](http://weibo.com/fython)
+新浪微博：[@FungGo](http://weibo.com/fython)
 
-Email��fython#163.com
+Email：fython#163.com
 
-Telegram��@fython
+Telegram：@fython
 
 
-����Ļ�����֧��һ���ҡ� ֧������316643843#qq.com
+乐意的话可以支持一下我→ 支付宝：316643843#qq.com
 
 ### License
 
